@@ -99,7 +99,7 @@ If all values are within normal ranges, provide general health advice based on t
 
 *Health Report*:
     """
-    model = ChatGoogleGenerativeAI(model="gemini-pro", temperatur=0.3, google_api_key=gemini_api_key)
+    model = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperatur=0.3, google_api_key=gemini_api_key)
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=gemini_api_key)
     prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
     db = FAISS.load_local('faiss_index', embeddings, allow_dangerous_deserialization=True)
